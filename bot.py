@@ -4,12 +4,14 @@ import os
 import random
 import time
 from gtts import gTTS
-
+from dotenv import load_dotenv
 from aiogram import Bot, Dispatcher, F, types
 from aiogram.filters import Command
 from aiogram.types import FSInputFile
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
+
+load_dotenv()
 
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 QUESTIONS_FILE = "questions.json"
